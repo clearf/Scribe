@@ -1,5 +1,6 @@
 {<img src="https://coveralls.io/repos/egong/Scribe/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/egong/Scribe]
 
+https://www.codeship.io/projects/c0c54770-f62e-0130-235e-3a47acb03cbe/status
 
 
 
