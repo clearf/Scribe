@@ -70,7 +70,7 @@ group :test do              #this is our testing suite.
   gem 'database_cleaner'    #included for testing
   gem 'capybara'
   gem 'launchy'
-  gem 'cucumber-rails'
+  gem 'cucumber-rails', :require => false
 end
 
 
