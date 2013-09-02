@@ -1,3 +1,6 @@
+[![Coverage Status](https://coveralls.io/repos/egong/Scribe/badge.png)](https://coveralls.io/r/egong/Scribe)
+
+
 == Welcome to Rails
 
 Rails is a web-application framework that includes everything needed to create
