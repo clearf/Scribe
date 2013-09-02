@@ -1,4 +1,6 @@
-[![Coverage Status](https://coveralls.io/repos/egong/Scribe/badge.png)](https://coveralls.io/r/egong/Scribe)
+{<img src="https://coveralls.io/repos/egong/Scribe/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/egong/Scribe]
+
+
 
 
 == Welcome to Rails
