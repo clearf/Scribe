@@ -13,7 +13,6 @@ gem 'unicorn-rails'
 gem 'coveralls', require: false
 gem 'simplecov', :require => false
 gem 'travis-lint'
-#puma
 gem 'route_downcaser'
 
 group :assets do
