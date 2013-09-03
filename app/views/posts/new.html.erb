@@ -1,0 +1,10 @@
+Make a new post here
+
+<%= form_tag new_post_path, :method => 'post' do %>
+<p>
+<%= text_field_tag :post, params[:post] %>
+<%= button_to "Post Topic" %>
+<% end %>
+</p>
+<br>
+

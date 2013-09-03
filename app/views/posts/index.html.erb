@@ -1,4 +1,8 @@
 <h1>Scribe</h1>
 
-<%= render partial: "post", collection: @posts %>
+<%#= render partial: "post", collection: @posts %>
 
+
+<% @posts.each do |post| %>
+<%= post.topic %>
+<% end %>

@@ -1,5 +1,7 @@
 Scribe::Application.routes.draw do
   root to: "posts#index"
+  resources :posts
+  post '/posts/new' => 'posts#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
