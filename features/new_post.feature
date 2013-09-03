@@ -1,14 +1,8 @@
 Feature: New Post
-In order to create a new post
-As a user
-I want click a new topic button
+In order to make a new post
+As a visitor
+I want to have a way to create something new
 
-Scenario: Show
-Given I click the new post button
-And my post has topic "Labor Day"
-And my post has comment "Labor Day is the first Monday in September"
-And my post has user with name "Eric Gong"
-When I go to the homepage
-Then I should see "Scribe"
-And I should see "Labor Day is the first Monday in September"
-And I should see "Eric Gong"
+Scenario: Posting
+Given I make a new post
+And I make a
