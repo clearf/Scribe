@@ -3,7 +3,8 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
-  def topic
-  end
+  # def new
+  #   @post = Post.new
+  # end
 
 end

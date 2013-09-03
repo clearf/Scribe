@@ -1,1 +1,11 @@
-<h2> Posts</h2>
+<h2> <%= post.topic %> </h2>
+<p>
+  <%= post.comments %>
+</p>
+
+
+<p>
+   <% post.comments.each do |c| %>
+    <%= post.comments[0]["description"] %>
+  <% end %>
+</p>

@@ -1,0 +1,87 @@
+{
+  "RSpec": {
+    "coverage": {
+      "/Users/ericgong/third_project/Scribe/app/controllers/application_controller.rb": [
+        1,
+        1,
+        null
+      ],
+      "/Users/ericgong/third_project/Scribe/app/helpers/application_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ericgong/third_project/Scribe/app/helpers/posts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ericgong/third_project/Scribe/app/controllers/posts_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/ericgong/third_project/Scribe/app/models/post.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/ericgong/third_project/Scribe/app/models/comment.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
+      ],
+      "/Users/ericgong/third_project/Scribe/app/models/user.rb": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null
+      ]
+    },
+    "timestamp": 1378214201
+  }
+}
