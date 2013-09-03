@@ -1,11 +1,11 @@
 <h2> <%= post.topic %> </h2>
 <p>
-  <%= post.comments %>
+<%= post.comments %>
 </p>
 
 
 <p>
-   <% post.comments.each do |c| %>
+ <% post.comments.each do |c| %>
     <%= post.comments[0]["description"] %>
   <% end %>
 </p>

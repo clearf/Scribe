@@ -1,1 +1,5 @@
-Hello World
+<%= link_to "New Comment", new_post_comment_path(@post) %>
+
+<%= @post.topic %>
+<%= render @post.comments %>
+

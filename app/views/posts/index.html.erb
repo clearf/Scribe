@@ -1,8 +1,11 @@
 <h1>Scribe</h1>
 
-<%= render partial: "post", collection: @posts %>
+<%#= render partial: "post", collection: @posts %>
 
-
+<ul>
 <% @posts.each do |post| %>
-<%= post.topic %>
+  <li><%= link_to post.topic, post %>, #comments: <%= link_to post.comments.count, post_comments_path(post) %></li>
 <% end %>
+</ul>
+
+<%= link_to "New Post", new_post_path %>
