@@ -23,13 +23,25 @@ describe CommentsController do
       # @post = Post.new(topic: "The title", :id => 1)
       # #nested route and unique controller
       # get :new, :id => 1
-       expect(@post).to eq(nil)
+       expect(@comment).to eq(@comment)
     end
   end
   describe "edit" do
     it "edits an individual comment" do
       get :edit, :id => 1
        expect(response).to render_template :edit
+    end
+  end
+  describe "create" do
+    it "creates a new comment" do
+    end
+  end
+  describe "update" do
+    it "updates a comment" do
+    end
+  end
+  describe "destroy" do
+    it "destroys a comment" do
     end
   end
 end
