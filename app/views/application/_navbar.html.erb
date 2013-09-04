@@ -1,0 +1,27 @@
+<header class="navbar navbar-fixed-top navbar-inverse">
+  <div class="navbar-inner">
+          <ul class="nav">
+            <li class="brand">Scribe It - by describing a topic in 200 characters or less</li>
+              <% if current_user.nil? %>
+              <span class="badge">
+                <li><%= link_to "Sign up", sign_up_path %></li>
+              </span>
+              <span class="badge">
+                <li><%= link_to "Log in", log_in_path %></li>
+              </span>
+              <% else %>
+
+              <% end %>
+              <% if current_user %>
+                <span class="badge">
+                  <li>Logged in as <%= current_user.name %>.</li>
+                  </span>
+                <span class="badge">
+                  <li><%= link_to "Log out", log_out_path %></li>
+                </span>
+              <% end %>
+            </ul>
+      </nav>
+    </div>
+   <div class="container">
+</header>

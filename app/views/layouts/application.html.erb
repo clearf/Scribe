@@ -7,8 +7,15 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'navbar' %>
 
-<%= link_to "Home", root_path %><br>
+<% flash.each do |name, msg| %>
+  <%= content_tag :div, msg, :id => "flash_#{name}" %>
+<% end %>
+
+<%# if current_user %>
+<%= link_to "Home", posts_path %><br>
+<%# end %>
 <%= yield %>
 
 </body>

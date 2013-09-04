@@ -1,0 +1,45 @@
+
+
+<div class="control-group">
+
+  <%= form_for @user  do |f| %>
+  <% if @user.errors.any? %>
+  <div class="error_messages">
+    <h2>Form is invalid</h2>
+    <ul>
+      <% for message in @user.errors.full_messages %>
+      <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<% end %>
+
+
+<h1>Sign Up</h1>
+<p>
+  <%= f.label :name, :class=>'control-label' %>
+  <br>
+  <%= f.text_field :name %>
+</p>
+<br>
+<p>
+  <%= f.label :email, :class=>'control-label' %>
+  <br>
+  <%= f.text_field :email %>
+</p>
+<br>
+<p>
+  <%= f.label :password, :class=>'control-label'%>
+  <br>
+  <%= f.password_field :password %>
+</p>
+<br>
+<p>
+  <%= f.label :password_confirmation, :class=>'control-label'%>
+  <br>
+  <%= f.password_field :password_confirmation %>
+</p>
+<br>
+<p class="button"><%= f.submit %></p>
+<% end %>
