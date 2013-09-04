@@ -5,6 +5,10 @@
 <ul>
 <% @posts.each do |post| %>
   <li><%= link_to post.topic, post %>, #comments: <%= link_to post.comments.count, post_comments_path(post) %></li>
+
+  <em>
+
+  </em>
 <% end %>
 </ul>
 

@@ -2,7 +2,8 @@ class CommentsController < ApplicationController
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.all
+    # @comments = Comment.all
+    @comments = Comment.find_with_reputation(:votes, :all, order: "votes desc")
 
     respond_to do |format|
       format.html # index.html.erb
@@ -56,6 +57,14 @@ class CommentsController < ApplicationController
 
   # PUT /comments/1
   # PUT /comments/1.json
+
+  def vote
+    value = params[:type]  == "up" ? 1 : -1
+     @comment = Comment.find(params[:id])
+     @comment.add_evaluation(:votes, value, current_user)
+     redirect_to :back, notice: "you voted!"
+  end
+
   def update
     @comment = Comment.find(params[:id])
 

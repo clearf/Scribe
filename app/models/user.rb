@@ -12,6 +12,8 @@
 class User < ActiveRecord::Base
   has_many :posts
   has_many :comments
+  has_many :evaluations, class_name: "RSEvaluation", as: :source
+  has_reputation :votes, source: {reputation: :votes, of: :haikus}, aggregated_by: :sum
   attr_accessible :comment, :email, :name, :password, :password_confirmation
 
   attr_accessor :password

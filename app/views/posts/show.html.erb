@@ -1,5 +1,19 @@
 <%= link_to "New Comment", new_post_comment_path(@post) %>
 
 <%= @post.topic %>
-<%= render @post.comments %>
+
+<%=  render @post.comments %>
+
+
+
+
+<br>
+<li>
+    | <%= link_to "up", vote_post_comment_path(@post.comments, type: "up"), method: "post" %>
+    | <%= link_to "down", vote_post_comment_path(@post.comments, type: "down"), method: "post" %>
+
+</li>
+
+
+
 

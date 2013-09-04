@@ -14,4 +14,6 @@ class Comment < ActiveRecord::Base
   belongs_to :user
   belongs_to :post
   attr_accessible :description
+
+  has_reputation :votes, source: :user, aggregated_by: :sum
 end

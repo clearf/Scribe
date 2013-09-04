@@ -4,6 +4,32 @@
       "/Users/ericgong/third_project/Scribe/app/controllers/application_controller.rb": [
         1,
         1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        null,
+        1,
+        0,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
         null
       ],
       "/Users/ericgong/third_project/Scribe/app/helpers/application_helper.rb": [
@@ -15,6 +41,10 @@
         null
       ],
       "/Users/ericgong/third_project/Scribe/app/helpers/posts_helper.rb": [
+        1,
+        null
+      ],
+      "/Users/ericgong/third_project/Scribe/app/helpers/sessions_helper.rb": [
         1,
         null
       ],
@@ -75,6 +105,14 @@
         null,
         null,
         null,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
         null,
         null,
         1,
@@ -226,6 +264,35 @@
         1,
         null
       ],
+      "/Users/ericgong/third_project/Scribe/app/controllers/sessions_controller.rb": [
+        1,
+        null,
+        null,
+        1,
+        null,
+        null,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        null,
+        0,
+        0,
+        null,
+        null,
+        null,
+        1,
+        0,
+        0,
+        null,
+        null,
+        1,
+        null,
+        null,
+        null
+      ],
       "/Users/ericgong/third_project/Scribe/app/controllers/users_controller.rb": [
         1,
         null,
@@ -303,11 +370,11 @@
         null
       ]
     },
-    "timestamp": 1378309265
+    "timestamp": 1378317160
   },
   "Cucumber Features": {
     "coverage": {
     },
-    "timestamp": 1378315732
+    "timestamp": 1378317150
   }
 }

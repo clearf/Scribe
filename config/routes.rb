@@ -1,5 +1,4 @@
 Scribe::Application.routes.draw do
-  resources :comments
   put '/posts/update' => 'posts#update'
   delete '/posts/delete' => 'posts#delete'
   put '/comments/update' => 'comments#update'
@@ -11,10 +10,16 @@ Scribe::Application.routes.draw do
   get "log_in" => "sessions#new", :as => "log_in"
   get "sign_up" => "users#new", :as => "sign_up"
 
+  post '/comments/vote' => 'comments#vote'
+
+  resources :comments
   resources :sessions
   resources :users
+  # resources :comments_vote
   resources :posts do
-    resources :comments
+    resources :comments do
+      member { post :vote }
+    end
   end
 
   # The priority is based upon order of creation:
