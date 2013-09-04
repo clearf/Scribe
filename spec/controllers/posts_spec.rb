@@ -52,7 +52,8 @@ end
   end
   describe "update" do
     it "test update" do
-    put :update,  message: FactoryGirl.attributes_for(:post)
+    put :update, :id => 1
+    # message: FactoryGirl.attributes_for(:post)
     # , post: attributes_for(:post)
     flash[:notice].should eq('Post was successfully updated.')
      expect(response).to render_template @post
@@ -61,10 +62,10 @@ end
   end
   describe "destroy" do
     it "test destroy" do
-      delete :destroy
+      delete :destroy, :id => 1
       # @post :destroy, :id => 1
       # @post.delete
-      expect(response).to render_template posts_url
+      expect(response).to render_template @post
     end
   end
 end

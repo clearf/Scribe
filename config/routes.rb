@@ -1,6 +1,7 @@
 Scribe::Application.routes.draw do
   resources :comments
-
+  put '/posts/update' => 'posts#update'
+  delete '/posts/delete' => 'posts#delete'
 
   root to: "posts#index"
 
