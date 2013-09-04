@@ -34,14 +34,24 @@ describe CommentsController do
   end
   describe "create" do
     it "creates a new comment" do
+      # post = Post.new(:id => 1)
+      # comment = Comment.new(description: 'love testing', id: 1)
+      # get :create, :id => 1
+      #   expect(response).to render_template @post
+      # post :create, :id => 1
+      # expect(response).to render_template :destroy
     end
   end
   describe "update" do
     it "updates a comment" do
+      put :update, :id => 1
+     expect(response).to render_template @comment
     end
   end
   describe "destroy" do
     it "destroys a comment" do
+      delete :destroy, :id => 1
+       expect(response).to render_template @comment
     end
   end
 end
