@@ -10,11 +10,21 @@ end
       get :index, letter: 'S'
       expect(response).to render_template :index
     end
+#     it "is an array" do
+#       post = create(:post, topic: 'twitter')
+# get :index, letter: 't'
+# expect(assigns(:posts)).to match_array([post])
+#     end
   end
   describe "show" do
     it "shows an individual post" do
       get :show, :id => 1
        expect(response).to render_template :show
+    end
+    it "assigns :post to a variable post" do
+      post = create(:post)
+      get :show, id: post
+      expect(assigns(:post)).to eq post
     end
   end
   describe "new" do
@@ -42,7 +52,8 @@ end
   end
   describe "update" do
     it "test update" do
-    put :update
+    put :update,  message: FactoryGirl.attributes_for(:post)
+    # , post: attributes_for(:post)
     flash[:notice].should eq('Post was successfully updated.')
      expect(response).to render_template @post
 
