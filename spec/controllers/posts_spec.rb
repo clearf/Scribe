@@ -3,7 +3,7 @@ require_relative '../spec_helper'
 describe PostsController do
   before do
     @post = Post.create(topic: "The title")
-    visit post_path(@post)
+    # visit post_path(@post)
 end
   describe "index" do
     it "should have all the posts" do
@@ -33,22 +33,23 @@ end
   # error is expecting <"destroy"> but rendering with <"">
   #solution on stack overflow is
   #stub_templates :only => [:index, :new, :show, :edit]
-  # describe "create" do
-  #   it "creates an individual post" do
-  #     post :create, :id => 1
-  #      expect(response).to render_template :create
-  #   end
-  # end
-  # describe "update" do
-  #   it "updates an individual post" do
-  #     post :update, :id => 1
-  #      expect(response).to render_template :update
-  #   end
-  # end
-  # describe "destroy" do
-  #   it "destroy an individual post" do
-  #     post :destroy, :id => 1
-  #      expect(response).to render_template :destroy
-  #   end
-  # end
+  describe "create" do
+    it "test create" do
+      @post.should_receive(:id)
+
+    end
+  end
+  describe "update" do
+    it "test update" do
+      post :update, :id => 1
+
+    end
+  end
+  describe "destroy" do
+    it "test destroy" do
+      # @post :destroy, :id => 1
+      # @post.delete
+       expect(@post.destroy).to eq(nil)
+    end
+  end
 end
