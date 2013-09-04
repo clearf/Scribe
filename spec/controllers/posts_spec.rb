@@ -36,23 +36,24 @@ end
   describe "create" do
     it "test create" do
       post :create
-       expect(response).to be_success
+      expect(response).to render_template @post
 
     end
   end
   describe "update" do
     it "test update" do
-      post :update, id => 1
-      expect(response).to be_success
+    put :update
+    flash[:notice].should eq('Post was successfully updated.')
+     expect(response).to render_template @post
 
     end
   end
   describe "destroy" do
     it "test destroy" do
-      post :destroy
+      delete :destroy
       # @post :destroy, :id => 1
       # @post.delete
-       expect(response).to be_success
+      expect(response).to render_template posts_url
     end
   end
 end
