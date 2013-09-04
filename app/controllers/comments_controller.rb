@@ -26,10 +26,10 @@ class CommentsController < ApplicationController
   def new
     @comment = Comment.new
     @post = Post.find(params[:post_id])
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @comment }
-    end
+    # respond_to do |format|
+    #   format.html # new.html.erb
+    #   format.json { render json: @comment }
+    # end
   end
 
   # GET /comments/1/edit
@@ -42,16 +42,16 @@ class CommentsController < ApplicationController
   def create
     @comment = Comment.new(params[:comment])
     @post = Post.find(params[:post_id])
-    @comment.post = @post
-    respond_to do |format|
-      if @comment.save
-        format.html { redirect_to @post, notice: 'Comment was successfully created.' }
-        format.json { render json: @post, status: :created, location: @post }
-      else
-        format.html { render action: "new" }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
-    end
+    # @comment.post = @post
+    # respond_to do |format|
+    #   if @comment.save
+    #     format.html { redirect_to @post, notice: 'Comment was successfully created.' }
+    #     format.json { render json: @post, status: :created, location: @post }
+    #   else
+    #     format.html { render action: "new" }
+    #     format.json { render json: @comment.errors, status: :unprocessable_entity }
+    #   end
+    # end
   end
 
   # PUT /comments/1
@@ -59,15 +59,15 @@ class CommentsController < ApplicationController
   def update
     @comment = Comment.find(params[:id])
 
-    respond_to do |format|
-      if @comment.update_attributes(params[:comment])
-        format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @comment.errors, status: :unprocessable_entity }
-      end
-    end
+  #   respond_to do |format|
+  #     if @comment.update_attributes(params[:comment])
+  #       format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
+  #       format.json { head :no_content }
+  #     else
+  #       format.html { render action: "edit" }
+  #       format.json { render json: @comment.errors, status: :unprocessable_entity }
+  #     end
+  #   end
   end
 
   # DELETE /comments/1
@@ -76,9 +76,9 @@ class CommentsController < ApplicationController
     @comment = Comment.find(params[:id])
     @comment.destroy
 
-    respond_to do |format|
-      format.html { redirect_to comments_url }
-      format.json { head :no_content }
-    end
+    # respond_to do |format|
+    #   format.html { redirect_to comments_url }
+    #   format.json { head :no_content }
+    # end
   end
 end
