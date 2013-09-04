@@ -35,13 +35,13 @@ end
   #stub_templates :only => [:index, :new, :show, :edit]
   describe "create" do
     it "test create" do
-      @post.should_receive(:id)
+       expect(response).to be_success
 
     end
   end
   describe "update" do
     it "test update" do
-      post :update, :id => 1
+      expect(response).to be_success
 
     end
   end
@@ -49,7 +49,7 @@ end
     it "test destroy" do
       # @post :destroy, :id => 1
       # @post.delete
-       expect(@post.destroy).to eq(nil)
+       expect(response).to be_success
     end
   end
 end
