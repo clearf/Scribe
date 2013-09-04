@@ -57,12 +57,12 @@ class CommentsController < ApplicationController
 
   # PUT /comments/1
   # PUT /comments/1.json
-
   def vote
     value = params[:type]  == "up" ? 1 : -1
-     @comment = Comment.find(params[:id])
-     @comment.add_evaluation(:votes, value, current_user)
-     redirect_to :back, notice: "you voted!"
+    @comment = Comment.find(params[:id])
+    @comment.add_or_update_evaluation(:votes, value, current_user)
+    puts @comment.reputations
+    redirect_to :back, notice: "you voted!"
   end
 
   def update

@@ -6,10 +6,10 @@ gem 'rails', '3.2.13'
 gem 'pg', group: :production
 gem 'bcrypt-ruby', require: 'bcrypt'
 
-
+gem 'newrelic_rpm'
 gem 'activerecord-reputation-system', require: 'reputation_system'
 gem 'jquery-rails'
-gem 'unicorn-rails'
+# gem 'unicorn-rails'
 gem 'coveralls', require: false
 gem 'simplecov', :require => false
 gem 'travis-lint'
