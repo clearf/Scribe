@@ -35,18 +35,21 @@ end
   #stub_templates :only => [:index, :new, :show, :edit]
   describe "create" do
     it "test create" do
+      post :create
        expect(response).to be_success
 
     end
   end
   describe "update" do
     it "test update" do
+      post :update, id => 1
       expect(response).to be_success
 
     end
   end
   describe "destroy" do
     it "test destroy" do
+      post :destroy
       # @post :destroy, :id => 1
       # @post.delete
        expect(response).to be_success
