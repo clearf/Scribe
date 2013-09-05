@@ -40,7 +40,7 @@ class User < ActiveRecord::Base
     end
   end
 
-  def voted_for?(haiku)
-    evaluations.where(target_type: haiku.class, target_id: haiku.id).present?
+  def voted_for?(comment)
+    evaluations.where(target_type: comment.class, target_id: comment.id).present?
   end
 end
