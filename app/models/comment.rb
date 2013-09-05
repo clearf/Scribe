@@ -19,4 +19,8 @@ class Comment < ActiveRecord::Base
 
 
   validates :description, presence: true, allow_blank: false
+
+  # def self.most_voted
+  # find_with_reputation(:votes, :all, {:order => 'votes DESC'})
+  # end
 end

@@ -39,4 +39,8 @@ class User < ActiveRecord::Base
       self.password_hash = BCrypt::Engine.hash_secret(password, password_salt)
     end
   end
+
+  def voted_for?(haiku)
+    evaluations.where(target_type: haiku.class, target_id: haiku.id).present?
+  end
 end

@@ -4,6 +4,7 @@
     <div class="buttons-left">
       <%= pluralize comment.reputation_for(:votes).to_i, "vote" %>
     </div>
+    <% if current_user && !current_user.voted_for?(comment) %>
     <div class="buttons-left">
       <%= button_to "up", vote_post_comment_path(comment, type: "up") %>
     </div>
@@ -11,4 +12,5 @@
       <%= button_to "down", vote_post_comment_path(comment, type: "down") %>
     </div>
   </div>
+  <% end %>
 </div>

@@ -3,7 +3,8 @@ class CommentsController < ApplicationController
   # GET /comments.json
   def index
     # @comments = Comment.all
-    @comments = Comment.find_with_reputation(:votes, :all, order: "votes desc")
+    @comments = Comment.find_with_reputation(:votes, :all, {order: "votes desc"})
+    # @comments = Comment.page(params[:votes]).per(20).most_voted
 
     respond_to do |format|
       format.html # index.html.erb
