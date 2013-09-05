@@ -12,9 +12,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to action: 'new', :notice => "Signed up!"
+      redirect_to "/posts", :notice => "Signed up!"
     else
-      render "new"
+      render "/posts"
     end
   end
 
