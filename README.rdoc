@@ -2,5 +2,6 @@
 
 https://www.codeship.io/projects/c0c54770-f62e-0130-235e-3a47acb03cbe/status
 
+http://scribe-it.herokuapp.com/
 
 This is the third project for Eric's General Assembly WDI Course.  It is an application built with Behavior Driven Development, Continuously Integrated with Codeship and deployed with Heroku.

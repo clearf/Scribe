@@ -4,7 +4,7 @@
 <% if current_user %>
 <ul>
 <% @posts.each do |post| %>
-  <li><%= link_to post.topic, post %>, #comments: <%= link_to post.comments.count, post_comments_path(post) %></li>
+  <li><%= link_to post.topic, post %>, #comments: <%= link_to post.comments.count, post %></li>
 
   <em>
 
