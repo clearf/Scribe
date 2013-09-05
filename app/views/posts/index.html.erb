@@ -1,7 +1,7 @@
 <h1>Scribe</h1>
 
 <%#= render partial: "post", collection: @posts %>
-<%# if current_user %>
+<% if current_user %>
 <ul>
 <% @posts.each do |post| %>
   <li><%= link_to post.topic, post %>, #comments: <%= link_to post.comments.count, post %></li>
@@ -13,4 +13,4 @@
 </ul>
 
 <%= link_to "New Post", new_post_path %>
-<%# end %>
+<% end %>
