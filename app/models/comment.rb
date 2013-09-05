@@ -16,4 +16,7 @@ class Comment < ActiveRecord::Base
   attr_accessible :description
 
   has_reputation :votes, source: :user, aggregated_by: :sum
+
+
+  validates :description, presence: true, allow_blank: false
 end
