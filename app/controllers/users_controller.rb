@@ -12,9 +12,9 @@ class UsersController < ApplicationController
   def create
     @user = User.new(params[:user])
     if @user.save
-      redirect_to "/posts", :notice => "Signed up!"
+      redirect_to log_in_path, :notice => "Signed up!"
     else
-      render "/posts"
+      render sign_up_path
     end
   end
 
