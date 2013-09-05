@@ -1,8 +1,14 @@
 <div class="comment">
   <%= comment.description %>
   <div class="voting-buttons">
-       <%= pluralize comment.reputation_for(:votes).to_i, "vote" %>
-    <%= button_to "up", vote_post_comment_path(comment, type: "up") %>
-    <%= button_to "down", vote_post_comment_path(comment, type: "down") %>
+    <div class="buttons-left">
+      <%= pluralize comment.reputation_for(:votes).to_i, "vote" %>
+    </div>
+    <div class="buttons-left">
+      <%= button_to "up", vote_post_comment_path(comment, type: "up") %>
+    </div>
+    <div class="buttons-left">
+      <%= button_to "down", vote_post_comment_path(comment, type: "down") %>
+    </div>
   </div>
 </div>
