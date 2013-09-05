@@ -1,6 +1,10 @@
-<h1>Scribe</h1>
+<h1>Step 1</h1>
+<h3>Create a new topic that people are talking about</h3>
+
 
 <%#= render partial: "post", collection: @posts %>
+
+<%= link_to "Create A New Topic", new_post_path %>
 <% if current_user %>
 <ul>
 <% @posts.each do |post| %>
@@ -12,5 +16,4 @@
 <% end %>
 </ul>
 
-<%= link_to "Make A New Topic", new_post_path %>
 <% end %>
