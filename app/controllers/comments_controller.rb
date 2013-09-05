@@ -61,7 +61,7 @@ class CommentsController < ApplicationController
   def vote
     value = params[:type]  == "up" ? 1 : -1
     @comment = Comment.find(params[:id])
-    @comment.add_or_update_evaluation(:votes, value, current_user)
+    @comment.increase_evaluation(:votes, value, current_user)
     puts @comment.reputations
     redirect_to :back, notice: "you voted!"
     # binding.pry
