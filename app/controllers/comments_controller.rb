@@ -64,7 +64,6 @@ class CommentsController < ApplicationController
     @comment.increase_evaluation(:votes, value, current_user)
     puts @comment.reputations
     redirect_to :back, notice: "you voted!"
-    # binding.pry
   end
 
   def update
