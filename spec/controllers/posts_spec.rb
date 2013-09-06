@@ -1,4 +1,7 @@
+require 'capybara/rspec'
 require_relative '../spec_helper'
+require 'faker'
+require 'factory_girl'
 
 describe PostsController do
   before do

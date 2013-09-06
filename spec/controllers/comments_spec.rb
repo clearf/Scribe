@@ -1,9 +1,13 @@
+require 'capybara/rspec'
 require_relative '../spec_helper'
+require 'faker'
+require 'factory_girl'
 
 describe CommentsController do
   before do
-    @comment = Comment.create(description: "The title")
-    visit comment_path(@comment)
+    @comment = FactoryGirl.create(:comment)
+    @post = FactoryGirl.create(:post)
+    # visit comment_path(@comment)
   end
   describe "index" do
     it "should have all the comments" do
@@ -23,6 +27,7 @@ describe CommentsController do
        expect(@comment).to be_valid
     end
   end
+
   describe "edit" do
     it "edits an individual comment" do
       get :edit, :id => 1
