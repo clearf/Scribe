@@ -10,33 +10,33 @@ describe "equality" do
   end
 end
 
-# #use Capybara to simulate user movement
-# #these are extremely time consuming to write but so
-# #rewarding
-# feature 'User management' do
-#   scenario 'sign up' do
-#     visit '/'
-#       click_link 'Sign up'
-#       fill_in 'Name', with: Faker::Name.name
-#       fill_in 'Email', with: Faker::Internet.email
-#       fill_in 'Password', with: 'testpassword'
-#       fill_in 'Password confirmation', with: 'testpassword'
-#       click_button 'Create User'
-#       page.should have_content('Signed up!')
-#   end
+#use Capybara to simulate user movement
+#these are extremely time consuming to write but so
+#rewarding
+feature 'User management' do
+  scenario 'sign up' do
+    visit '/'
+      click_link 'Sign up'
+      fill_in 'Name', with: Faker::Name.name
+      fill_in 'Email', with: Faker::Internet.email
+      fill_in 'Password', with: 'testpassword'
+      fill_in 'Password confirmation', with: 'testpassword'
+      click_button 'Create User'
+      page.should have_content('Signed up!')
+  end
 
 
-#   scenario 'log in without signing up' do
-#     visit '/'
-#       click_link 'Log in'
-#       fill_in 'Name', with: 'i dont need a damn log in'
-#       fill_in 'Password', with: 'just gonna walk right in'
-#       click_button 'Log in'
-#       expect(current_path).to eq '/sessions'
-#       #sessions because the sessions authentication takes you
-#       #from log_in to sessions if you didn't log in
-#       page.should have_content('Invalid password')
-#   end
+  scenario 'log in without signing up' do
+    visit '/'
+      click_link 'Log in'
+      fill_in 'Name', with: 'i dont need a damn log in'
+      fill_in 'Password', with: 'just gonna walk right in'
+      click_button 'Log in'
+      expect(current_path).to eq '/sessions'
+      #sessions because the sessions authentication takes you
+      #from log_in to sessions if you didn't log in
+      page.should have_content('Invalid password')
+  end
 
 #    scenario 'log in with an existing user' do
 #     visit '/'
@@ -52,22 +52,22 @@ end
 #       page.should have_content('Logged in!')
 #   end
 
-#   scenario 'Sign up' do
-#     visit '/'
-#       click_link 'Sign up'
-#       #will fill in with a known working user.  i want to
-#       #try factory girl to generate but its a little buggy
-#       fill_in 'Name', with: 'newuser'
-#       fill_in 'Email', with: 'newuser@example.com'
-#       fill_in 'Password', with: '123456'
-#       fill_in 'Password confirmation', with: '123456'
-#       click_button 'Create User'
-#       expect(current_path).to eq '/'
-#       #sessions because the sessions authentication takes you
-#       #from log_in to sessions if you didn't log in
-#       page.should have_content('Signed up!')
-#   end
-# end
+  scenario 'Sign up' do
+    visit '/'
+      click_link 'Sign up'
+      #will fill in with a known working user.  i want to
+      #try factory girl to generate but its a little buggy
+      fill_in 'Name', with: 'newuser'
+      fill_in 'Email', with: 'newuser@example.com'
+      fill_in 'Password', with: '123456'
+      fill_in 'Password confirmation', with: '123456'
+      click_button 'Create User'
+      expect(current_path).to eq '/log_in'
+      #sessions because the sessions authentication takes you
+      #from log_in to sessions if you didn't log in
+      page.should have_content('Signed up!')
+  end
+end
 
 describe User do
   it "User.new name should be blank" do
