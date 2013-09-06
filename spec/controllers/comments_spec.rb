@@ -23,6 +23,8 @@ describe CommentsController do
   end
   describe "new" do
     it "renders new" do
+      visit "/users/new"
+       response.should render_template('users/new')
        @comment = Comment.new(description: 'validation')
        expect(@comment).to be_valid
     end
