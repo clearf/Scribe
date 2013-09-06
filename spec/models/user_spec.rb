@@ -38,19 +38,6 @@ feature 'User management' do
       page.should have_content('Invalid password')
   end
 
-#    scenario 'log in with an existing user' do
-#     visit '/'
-#       click_link 'Log in'
-#       #will fill in with a known working user.  i want to
-#       #try factory girl to generate but its a little buggy
-#       fill_in 'Name', with: 'erictest'
-#       fill_in 'Password', with: '123456'
-#       click_button 'Log in'
-#       # expect(current_path).to eq '/sessions'
-#       #sessions because the sessions authentication takes you
-#       #from log_in to sessions if you didn't log in
-#       page.should have_content('Logged in!')
-#   end
 
   scenario 'Sign up' do
     visit '/'

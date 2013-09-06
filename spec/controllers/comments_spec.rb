@@ -7,7 +7,7 @@ describe CommentsController do
   end
   describe "index" do
     it "should have all the comments" do
-      get :index, letter: 'S'
+      get :index
       expect(response).to render_template :index
     end
   end
@@ -19,11 +19,8 @@ describe CommentsController do
   end
   describe "new" do
     it "renders new" do
-      #come back to this
-      # @post = Post.new(topic: "The title", :id => 1)
-      # #nested route and unique controller
-      # get :new, :id => 1
-       expect(@comment).to eq(@comment)
+       @comment = Comment.new(description: 'validation')
+       expect(@comment).to be_valid
     end
   end
   describe "edit" do
@@ -34,12 +31,7 @@ describe CommentsController do
   end
   describe "create" do
     it "creates a new comment" do
-      # post = Post.new(:id => 1)
-      # comment = Comment.new(description: 'love testing', id: 1)
-      # get :create, :id => 1
-      #   expect(response).to render_template @post
-      # post :create, :id => 1
-      # expect(response).to render_template :destroy
+
     end
   end
   describe "update" do
