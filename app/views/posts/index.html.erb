@@ -1,3 +1,4 @@
+<% if current_user %>
 <h1>Step 1</h1>
 <h3>Create or comment on trending topic that people are talking about</h3>
 
@@ -5,7 +6,7 @@
 <%#= render partial: "post", collection: @posts %>
 
 <%= link_to "Create A New Topic", new_post_path %>
-<% if current_user %>
+
 <ul>
 <% @posts.each do |post| %>
   <li><%= link_to post.topic, post %>, #comments: <%= link_to post.comments.count, post %></li>
