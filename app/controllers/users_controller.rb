@@ -2,6 +2,7 @@ class UsersController < ApplicationController
 
   def index
     @users = User.all
+    redirect_to root_url
   end
 
 
@@ -14,7 +15,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to log_in_path, :notice => "Signed up!"
     else
-      render sign_up_path
+      render 'new'
     end
   end
 
